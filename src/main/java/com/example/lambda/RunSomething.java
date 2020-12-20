@@ -1,4 +1,4 @@
-package com.example.java8to11;
+package com.example.lambda;
 
 @FunctionalInterface //추상메서드가 하나만존재할경우
 public interface RunSomething {

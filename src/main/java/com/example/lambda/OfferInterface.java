@@ -1,8 +1,11 @@
-package com.example.java8to11;
+package com.example.lambda;
 
 import java.util.function.*;
 
-public class Foo {
+public class OfferInterface  { // 다이아몬드 문제 , 어떤default를 먼저 쓰게 할거냐? 컴파일 에러
+
+
+
     public static void main(String[] args) {
 
         int basenum = 10;
@@ -59,9 +62,13 @@ public class Foo {
         System.out.println(isEvnen.or(isOdd).test(2));
 
 
-        System.out.println("UnaryOperator : 입력값과 출력값의 타입이 같을때 사용한다.");
+        System.out.println("UnaryOperator : 입력값과 출력값의 타입이 같을때 하나로 줄여서 사용가능하다.");
         UnaryOperator<Integer> unary = (i) -> i + 10; //람다식을 활용한 함수 호출
         System.out.println(unary.apply(10));
 
+        BinaryOperator<Integer> getBi = (a,b) -> a+b;
+        System.out.println(getBi.apply(10,20));
+
     }
+
 }
