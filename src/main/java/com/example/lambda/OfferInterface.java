@@ -27,12 +27,12 @@ public class OfferInterface  { // 다이아몬드 문제 , 어떤default를 먼�
         Function<Integer, Integer> multiply2 = (i) -> i * 2;
         System.out.println(multiply2.apply(2)); // 4
 
-        System.out.println("compose 함수 : () 안의 변수를 먼저계산하고 출력된 값을 '.' 앞의 변수에 입력값으로 적용시킨다.");
+        System.out.println("compose 함수 : () 안의 함수를 먼저 계산하고 출력된 값을 '.' 앞의 함수에 입력값으로 적용시킨다.");
         Function<Integer, Integer> multiply2AndPlus10 = plus10.compose(multiply2);// 컴포우즈 : 입력값을 가지고 먼저 뒤에오는 함수를 적용시킨다. 그리고 결과값을 plus10의 입력값으로 사용한다.
-        System.out.println("곱셈 함수의 리턴값을 플러스 함수의 입력값으로 받는다 : " + multiply2AndPlus10.apply(2));  // 14
+        System.out.println(multiply2AndPlus10.apply(2));  // 14
 
-        System.out.println("andThe 함수 : '.' 앞의 변수를 먼저 계산하고 출력된 값을 () 변수의 입력값에 적용시킨다");
-        System.out.println("플러스 함수의 리턴값을 곱셈 함수의 입력값으로 받는다 :  " +plus10.andThen(multiply2).apply(2)); // 24 : plus10의 결과값을 multi에서 입력값으로 사용한다.
+        System.out.println("andThe 함수 : '.' 앞의 함수를 먼저 계산하고 출력된 값을 () 안의 함수에 입력값에 적용시킨다");
+        System.out.println(plus10.andThen(multiply2).apply(2)); // 24 : plus10의 결과값을 multi에서 입력값으로 사용한다.
 
 
         System.out.println("Consumer 함수 : 리턴값은 없으며 출력값만 있다.");
