@@ -1,10 +1,12 @@
 package com.example.stream;
 
+import java.util.Optional;
+
 public class OnlineClass {
     private Integer id;
     private String title;
     private boolean colsed;
-
+    public Progress progress;
 
     public OnlineClass(Integer id, String title, boolean colsed) {
         this.id = id;
@@ -34,5 +36,13 @@ public class OnlineClass {
 
     public void setColsed(boolean colsed) {
         this.colsed = colsed;
+    }
+
+    public Optional<Progress> getProgress() {
+        return Optional.ofNullable(progress);
+    }
+
+    public void setProgress(Progress progress) {
+        this.progress = progress;
     }
 }
