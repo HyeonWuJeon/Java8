@@ -36,7 +36,7 @@ public class OfferInterface  { // 다이아몬드 문제 , 어떤default를 먼�
 
 
         System.out.println("Consumer 함수 : 리턴값은 없으며 출력값만 있다.");
-        Consumer<Integer> printT = (i) -> System.out.println(i);
+        Consumer<Integer> printT = System.out::println;
         printT.accept(10);
 
         System.out.println("BiConsumer 함수 : 입력값이 두개일 경우 사용한다." );
