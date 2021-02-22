@@ -1,4 +1,4 @@
-package com.example.completableFuture;
+package com.example.thread;
 
 public class ThreadApp {
     public static void main(String[] args) {
